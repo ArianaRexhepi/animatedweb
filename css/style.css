@@ -24,6 +24,7 @@ header {
     justify-content: space-between;
     align-items: center;
     z-index: 10000; 
+    overflow: hidden;
 }
 
 header .logo {
@@ -67,7 +68,7 @@ section {
     padding: 100px;
     justify-content: center;
     align-items: center;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 section::before{
     content: '';
@@ -85,6 +86,7 @@ section img {
     transform: translate(-50%, -50%);
     object-fit: cover;
     pointer-events: none;
+    overflow: hidden;
 }
 
 section img#stars {
@@ -104,6 +106,7 @@ section img#moon {
     animation: fall linear infinite;
     z-index: 2;
     opacity: 0.5;
+    overflow: hidden;
 }
 /* @keyframes fall {
     0% {
