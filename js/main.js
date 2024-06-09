@@ -43,7 +43,7 @@ function rotateBox(box) {
     box.style.transform = "rotate(360deg)";
 }
 
-// Function to check if element is in viewport
+
 function isInViewport(element) {
     const rect = element.getBoundingClientRect();
     return (
@@ -54,7 +54,7 @@ function isInViewport(element) {
     );
 }
 
-// Function to handle scroll animations
+
 function handleScrollAnimations() {
     const boxes = document.querySelectorAll('.header-card');
     boxes.forEach(box => {
@@ -64,15 +64,15 @@ function handleScrollAnimations() {
     });
 }
 
-// Function to rotate box on click
+
 function rotateBox(box) {
     box.style.transform += " rotate(360deg)";
 }
 
-// Event listener for scroll
+
 window.addEventListener('scroll', handleScrollAnimations);
 
-// Initial call to handle animations on page load
+
 handleScrollAnimations();
 
 

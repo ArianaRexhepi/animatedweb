@@ -150,20 +150,20 @@ section img#moon {
 
 /* about us section */
 
-/* Article background */
+
 .feature {
     background: #2b1055;
     padding: 50px 0;
 }
 
-/* Container styles */
+
 .container {
     max-width: 1200px;
     margin: 100px;
     padding: 20px;
 }
 
-/* Flex container styles */
+
 .flex {
     display: flex;
     justify-content: space-between;
@@ -171,7 +171,7 @@ section img#moon {
     flex-wrap: wrap;
 }
 
-/* Card styles */
+
 .header-card {
     flex: 1;
     max-width: 300px;
@@ -192,7 +192,7 @@ section img#moon {
     display: block;
     margin: 0 auto 15px;
     border-radius: 50%;
-    transition: transform 1s ease; /* Smooth rotation */
+    transition: transform 1s ease;
 }
 
 .header-card h4 {
@@ -207,24 +207,24 @@ section img#moon {
     line-height: 1.6;
 }
 
-/* Animation for visibility */
+
 .header-card.visible {
     opacity: 1;
     transform: translateY(0) scale(1);
     transition: transform 0.6s ease, opacity 0.6s ease;
 }
 
-/* Hover effect with rotation */
+
 .header-card:hover {
     transform: scale(1.05) translateY(-10px);
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
 }
 
 .header-card:hover img {
-    transform: rotate(360deg); /* Full rotation */
+    transform: rotate(360deg);
 }
 
-/* Keyframes for slide-in animation */
+
 @keyframes slideInFromLeft {
     0% {
         opacity: 0;
@@ -247,7 +247,7 @@ section img#moon {
     }
 }
 
-/* Keyframes for bounce effect */
+
 @keyframes bounceIn {
     0% {
         opacity: 0;
@@ -263,7 +263,7 @@ section img#moon {
     }
 }
 
-/* Assign animations to each box */
+
 .box1 {
     animation: slideInFromLeft 1s ease-out;
 }
@@ -282,7 +282,7 @@ section img#moon {
 
 .header-card:hover {
     transform: perspective(500px) rotateX(10deg) rotateY(10deg);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2), 0 0 50px rgba(255, 255, 255, 0.5); /* Added glow effect */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2), 0 0 50px rgba(255, 255, 255, 0.5); 
 }
 
 .header-card:hover img {
