@@ -338,54 +338,109 @@ section img#moon {
     height: auto;
   }
   
-  .portfolio {
-    padding: 50px 0;
-    background-color: #f9f9f9;
+ .portfolio {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+}
+
+h2 {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.portfolio-buttons {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.btnn {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: #fff;
+  border: 1px solid #333;
+  color: #333;
+}
+
+.btnn.active {
+  background-color: #333;
+  color: #fff;
+}
+
+.portfolio-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.item {
+  margin: 10px;
+  overflow: hidden;
+  width: 400px; /* Adjust item width as needed */
+}
+
+.item img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.item img:hover {
+  transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.cool-text {
     text-align: center;
+    padding: 50px;
   }
   
   h2 {
-    margin-bottom: 30px;
-  }
-  
-  .portfolio-buttons {
+    font-size: 36px;
+    color: #333;
     margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
   }
   
-  .btnn {
-    padding: 10px 20px;
-    margin: 0 10px;
-    border: 1px solid #ccc;
-    background-color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 50%;
+    height: 2px;
+    background-color: #FFC107;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
   }
   
-  .btn.active {
-    background-color: #333;
-    color: #fff;
+  h2:hover::after {
+    width: 80%;
   }
   
-  .portfolio-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
   }
   
-  .item {
-    margin: 10px;
-    overflow: hidden;
-    width: 200px; /* Adjust item width as needed */
-  }
-  
-  .item img {
-    max-width: 100%;
-    height: auto;
-    transition: transform 0.3s ease;
-  }
-  
-  .item img:hover {
-    transform: scale(1.1);
+  .cool-text:hover p {
+    opacity: 1;
+    transform: translateY(0);
   }
   
   

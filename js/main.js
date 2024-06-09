@@ -95,26 +95,40 @@ function setVolume(volume) {
     audio.volume = volume;
 }
 document.addEventListener('DOMContentLoaded', function() {
-    const buttons = document.querySelectorAll('.btn');
+    const buttons = document.querySelectorAll('.btnn');
     const items = document.querySelectorAll('.item');
   
     buttons.forEach(button => {
       button.addEventListener('click', function() {
         const filter = this.getAttribute('data-filter');
   
-        buttons.forEach(btn => btn.classList.remove('active'));
+        buttons.forEach(btnn => btnn.classList.remove('active'));
         this.classList.add('active');
   
         items.forEach(item => {
           const category = item.getAttribute('data-category');
           if (filter === 'all' || filter === category) {
-            item.style.display = 'block';
+            fadeIn(item);
           } else {
             item.style.display = 'none';
           }
         });
       });
     });
+  
+    function fadeIn(element) {
+      let opacity = 0;
+      element.style.display = 'block';
+  
+      const timer = setInterval(function() {
+        if (opacity >= 1) {
+          clearInterval(timer);
+        }
+        element.style.opacity = opacity;
+        opacity += 0.1;
+      }, 50); // Adjust the delay between each image fade-in
+    }
   });
+  
   
   
