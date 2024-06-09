@@ -11,7 +11,7 @@
 body {
     min-height: 100vh;
     background: linear-gradient(#2b1055, #7597de);
-    /* overflow: hidden; */
+    overflow-x: hidden;
 }
 
 header {
@@ -95,15 +95,27 @@ section img#stars {
 }
 
 section img#moon {
-    width: 200px; 
-    height: auto; 
-    top: 30%;
-    /* left: 10%; */
+   position: fixed;
+    width: 150px; 
+    height: auto;
+    top: 50%; 
+    left: 50%; 
     transform: translate(-50%, -50%);
-    mix-blend-mode: screen;
-    opacity: 0.5; 
+    animation: fall linear infinite;
     z-index: 2;
+    opacity: 0.5;
 }
+/* @keyframes fall {
+    0% {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 1;
+    }
+} */
+
 #text{
     position: absolute;
     color: #fff;

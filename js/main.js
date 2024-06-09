@@ -1,25 +1,34 @@
+    let stars = document.getElementById('stars');
+    let moon = document.getElementById('moon');
+    let text = document.getElementById('text');
+    let btn = document.getElementById('btn');
 
     window.addEventListener('scroll', function() {
-        let moon = document.getElementById('moon');
-        let text = document.getElementById('text');
-        let btn = document.getElementById('btn');
-        let soundPlayed = false;
+      let value = window.scrollY;
+      text.style.marginRight = value * 4 +'px';
+      text.style.marginTop = value * 1.5 +'px';
+      btn.style.marginTop = value * 1.5 +'px';
 
-        // Get the scroll position
-        let scrollPosition = window.scrollY;
-
-        // Start rotation and move text after scrolling down a certain amount
-        if (scrollPosition > 100) {
-            moon.style.animationPlayState = 'running';
-            text.style.animationPlayState = 'running';
-
-            if (!soundPlayed) {
-                let audio = new Audio('path/to/sound.mp3');
-                audio.play();
-                soundPlayed = true;
-            }
-        } else {
-            moon.style.animationPlayState = 'paused';
-            text.style.animationPlayState = 'paused';
-        }
     });
+    
+    
+    let amplitude = 180; 
+    function updateMoonPosition() {
+    let textRect = text.getBoundingClientRect();
+    let centerX = textRect.left + textRect.width / 2;
+    let centerY = textRect.top + textRect.height / 2;
+
+
+    let time = performance.now() * 0.001; 
+    let xOffset = Math.sin(time) * amplitude;
+    let yOffset = Math.sin(time * 2) * amplitude;
+
+    let x = centerX + xOffset;
+    let y = centerY + yOffset;
+
+    moon.style.left = x + 'px';
+    moon.style.top = y + 'px';
+    }
+    setInterval(updateMoonPosition, 10); 
+
+    
