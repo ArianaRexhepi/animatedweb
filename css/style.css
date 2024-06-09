@@ -159,7 +159,7 @@ section img#moon {
 /* Container styles */
 .container {
     max-width: 1200px;
-    margin: 120px ;
+    margin: 100px;
     padding: 20px;
 }
 
@@ -168,6 +168,7 @@ section img#moon {
     display: flex;
     justify-content: space-between;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 /* Card styles */
@@ -182,7 +183,7 @@ section img#moon {
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(50px) scale(0.9);
 }
 
 .header-card img {
@@ -191,6 +192,7 @@ section img#moon {
     display: block;
     margin: 0 auto 15px;
     border-radius: 50%;
+    transition: transform 1s ease; /* Smooth rotation */
 }
 
 .header-card h4 {
@@ -208,40 +210,84 @@ section img#moon {
 /* Animation for visibility */
 .header-card.visible {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
+    transition: transform 0.6s ease, opacity 0.6s ease;
 }
 
-/* Hover effect */
+/* Hover effect with rotation */
 .header-card:hover {
-    transform: scale(1.05);
+    transform: scale(1.05) translateY(-10px);
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
 }
 
-/* Animation for box1 */
+.header-card:hover img {
+    transform: rotate(360deg); /* Full rotation */
+}
+
+/* Keyframes for slide-in animation */
 @keyframes slideInFromLeft {
     0% {
         opacity: 0;
-        transform: translateX(-100%);
+        transform: translateX(-100%) scale(0.9);
     }
     100% {
         opacity: 1;
-        transform: translateX(0);
+        transform: translateX(0) scale(1);
     }
 }
 
+@keyframes slideInFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100%) scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+/* Keyframes for bounce effect */
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3) translateY(50px);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05) translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Assign animations to each box */
 .box1 {
     animation: slideInFromLeft 1s ease-out;
 }
 
 .box2 {
-    animation: slideInFromLeft 1.2s ease-out;
+    animation: bounceIn 1.2s ease-out;
 }
 
 .box3 {
-    animation: slideInFromLeft 1.4s ease-out;
+    animation: slideInFromRight 1.4s ease-out;
 }
 
 .box4 {
-    animation: slideInFromLeft 1.6s ease-out;
+    animation: bounceIn 1.6s ease-out;
 }
+
+.header-card:hover {
+    transform: perspective(500px) rotateX(10deg) rotateY(10deg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2), 0 0 50px rgba(255, 255, 255, 0.5); /* Added glow effect */
+}
+
+.header-card:hover img {
+    transform: translateZ(20px);
+}
+
+
 

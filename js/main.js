@@ -75,3 +75,4 @@ window.addEventListener('scroll', handleScrollAnimations);
 // Initial call to handle animations on page load
 handleScrollAnimations();
 
+

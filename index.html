@@ -1,72 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" crossorigin="anonymous" />
-</head>
-<body>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
     <header>
-        <a href="#" class="logo">Logo</a>
-        <ul>
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Work</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
+      <a href="#" class="logo">Logo</a>
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
     </header>
     <section id="home">
-        <img src="img/colourful-night-sky-with-nebula-star-field.jpg" id="stars">
-        <img src="img/vector-illustration-full-moon-close-up-around-stars.png" id="moon">
-        <h2 id="text">Borealis</h2>
-            <li><a href="hero">About</a></li>
-        <a href="#hero" class="btn">Discover More</a>
+      <img
+        src="img/colourful-night-sky-with-nebula-star-field.jpg"
+        id="stars"
+      />
+      <img
+        src="img/vector-illustration-full-moon-close-up-around-stars.png"
+        id="moon"
+      />
+      <h2 id="text">Borealis</h2>
+      <a href="#feature" class="btn">Discover More</a>
     </section>
-    <article class="feature">
-        <div class="container">
-            <div class="flex">
-                <div class="header-card box1" onclick="rotateBox(this)">
-                    <div>
-                        <img src="img/brain.png" id="brain-img">
-                        <h4>Customized Solutions</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus illo illum sit voluptates eum,
-                            atque facilis dolorem nemo tempora provident odio ab, cum eius. Nobis similique nulla totam temporibus
-                            recusandae?</p>
-                    </div>
-                </div>
-                <div class="header-card box2" onclick="rotateBox(this)">
-                    <div>
-                        <img src="img/idea.png" id="idea-img">
-                        <h4>Roi Driven Approach</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus illo illum sit voluptates eum,
-                            atque facilis dolorem nemo tempora provident odio ab, cum eius. Nobis similique nulla totam temporibus
-                            recusandae?</p>
-                    </div>
-                </div>
-                <div class="header-card box3" onclick="rotateBox(this)">
-                    <div>
-                        <img src="img/rp.png" id="rp-img">
-                        <h4>Creative Solutions</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus illo illum sit voluptates eum,
-                            atque facilis dolorem nemo tempora provident odio ab, cum eius. Nobis similique nulla totam temporibus
-                            recusandae?</p>
-                    </div>
-                </div>
-                <div class="header-card box4" onclick="rotateBox(this)">
-                    <div>
-                        <img src="img/puzzle.png" id="puzzle-img">
-                        <h4>Expert Team</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus illo illum sit voluptates eum,
-                            atque facilis dolorem nemo tempora provident odio ab, cum eius. Nobis similique nulla totam temporibus
-                            recusandae?</p>
-                    </div>
-                </div>
+    <article class="feature" id="feature">
+      <div class="container">
+        <div class="flex">
+          <div class="header-card box1" onclick="rotateBox(this)">
+            <div>
+              <img src="img/brain.png" id="brain-img" />
+              <h4>Customized Solutions</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repellendus illo illum sit voluptates eum, atque facilis dolorem
+                nemo tempora provident odio ab, cum eius. Nobis similique nulla
+                totam temporibus recusandae?
+              </p>
             </div>
+          </div>
+          <div class="header-card box2" onclick="rotateBox(this)">
+            <div>
+              <img src="img/idea.png" id="idea-img" />
+              <h4>Roi Driven Approach</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repellendus illo illum sit voluptates eum, atque facilis dolorem
+                nemo tempora provident odio ab, cum eius. Nobis similique nulla
+                totam temporibus recusandae?
+              </p>
+            </div>
+          </div>
+          <div class="header-card box3" onclick="rotateBox(this)">
+            <div>
+              <img src="img/rp.png" id="rp-img" />
+              <h4>Creative Solutions</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repellendus illo illum sit voluptates eum, atque facilis dolorem
+                nemo tempora provident odio ab, cum eius. Nobis similique nulla
+                totam temporibus recusandae?
+              </p>
+            </div>
+          </div>
+          <div class="header-card box4" onclick="rotateBox(this)">
+            <div>
+              <img src="img/puzzle.png" id="puzzle-img" />
+              <h4>Expert Team</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repellendus illo illum sit voluptates eum, atque facilis dolorem
+                nemo tempora provident odio ab, cum eius. Nobis similique nulla
+                totam temporibus recusandae?
+              </p>
+            </div>
+          </div>
         </div>
+      </div>
     </article>
-    
-</body>
-<script src="js/main.js"></script>
+  </body>
+  <footer style="background: white">
+    <hr />
+    COPYRIGHT @2024
+  </footer>
+  <script src="js/main.js"></script>
 </html>
