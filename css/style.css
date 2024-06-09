@@ -33,3 +33,19 @@ header ul{
     justify-content: center;
     align-items: center;
 }
+header ul li{
+    list-style: none;
+    margin-left: 20px;
+}
+header ul li a
+{
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #ffff;
+    border-radius: 20px;
+}
+header ul li a:hover,
+header ul li a.active{
+    background: #ffff;
+    color: #2b1055;
+}
