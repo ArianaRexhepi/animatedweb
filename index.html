@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" crossorigin="anonymous" />
 </head>
 <body>
     <header>
@@ -16,44 +17,56 @@
             <li><a href="#">Contact</a></li>
         </ul>
     </header>
-    <section>
+    <section id="home">
         <img src="img/colourful-night-sky-with-nebula-star-field.jpg" id="stars">
         <img src="img/vector-illustration-full-moon-close-up-around-stars.png" id="moon">
         <h2 id="text">Borealis</h2>
-        <a href="#sec" class="btn">Discover More</a>
+            <li><a href="hero">About</a></li>
+        <a href="#hero" class="btn">Discover More</a>
     </section>
-    <div class="sec" id="sec">
-        <h2>Test</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus deserunt quas amet asperiores at totam suscipit. 
-            Odio, reiciendis alias blanditiis rerum asperiores fuga vel quaerat nemo sint eligendi dolor omnis.
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et maiores consectetur facere incidunt nostrum necessitatibus quae iste nam velit consequuntur deserunt, ut, 
-        optio laborum recusandae quibusdam non? Commodi, similique maxime? <br>
-    <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sequi iure, dolores optio alias nam eveniet quae quos maiores autem, animi, 
-    non dolorem dignissimos ratione blanditiis exercitationem deleniti nemo fuga?
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus deserunt quas amet asperiores at totam suscipit. 
-    Odio, reiciendis alias blanditiis rerum asperiores fuga vel quaerat nemo sint eligendi dolor omnis.
-Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et maiores consectetur facere incidunt nostrum necessitatibus quae iste nam velit consequuntur deserunt, ut, 
-optio laborum recusandae quibusdam non? Commodi, similique maxime? <br>
-<br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sequi iure, dolores optio alias nam eveniet quae quos maiores autem, animi, 
-non dolorem dignissimos ratione blanditiis exercitationem deleniti nemo fuga?
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sequi iure, dolores optio alias nam eveniet quae quos maiores autem, animi, 
-non dolorem dignissimos ratione blanditiis exercitationem deleniti nemo fuga?
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus deserunt quas amet asperiores at totam suscipit. 
-Odio, reiciendis alias blanditiis rerum asperiores fuga vel quaerat nemo sint eligendi dolor omnis.
-Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et maiores consectetur facere incidunt nostrum necessitatibus quae iste nam velit consequuntur deserunt, ut, 
-optio laborum recusandae quibusdam non? Commodi, similique maxime? <br>
-<br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sequi iure, dolores optio alias nam eveniet quae quos maiores autem, animi, 
-non dolorem dignissimos ratione blanditiis exercitationem deleniti nemo fuga?
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus deserunt quas amet asperiores at totam suscipit. 
-Odio, reiciendis alias blanditiis rerum asperiores fuga vel quaerat nemo sint eligendi dolor omnis.
-Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et maiores consectetur facere incidunt nostrum necessitatibus quae iste nam velit consequuntur deserunt, ut, 
-optio laborum recusandae quibusdam non? Commodi, similique maxime? <br>
-<br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sequi iure, dolores optio alias nam eveniet quae quos maiores autem, animi, 
-non dolorem dignissimos ratione blanditiis exercitationem deleniti nemo fuga?Et maiores consectetur facere incidunt nostrum necessitatibus quae iste nam velit consequuntur deserunt, ut, 
-optio laborum recusandae quibusdam non? Commodi, similique maxime? <br>
-<br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sequi iure, dolores optio alias nam eveniet quae quos maiores autem, animi, 
-non dolorem dignissimos ratione blanditiis exercitationem deleniti nemo fuga?</p>
-        </fiv>
+    <article class="feature">
+        <div class="container">
+            <div class="flex">
+                <div class="header-card box1" onclick="rotateBox(this)">
+                    <div>
+                        <img src="img/brain.png" id="brain-img">
+                        <h4>Customized Solutions</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus illo illum sit voluptates eum,
+                            atque facilis dolorem nemo tempora provident odio ab, cum eius. Nobis similique nulla totam temporibus
+                            recusandae?</p>
+                    </div>
+                </div>
+                <div class="header-card box2" onclick="rotateBox(this)">
+                    <div>
+                        <img src="img/idea.png" id="idea-img">
+                        <h4>Roi Driven Approach</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus illo illum sit voluptates eum,
+                            atque facilis dolorem nemo tempora provident odio ab, cum eius. Nobis similique nulla totam temporibus
+                            recusandae?</p>
+                    </div>
+                </div>
+                <div class="header-card box3" onclick="rotateBox(this)">
+                    <div>
+                        <img src="img/rp.png" id="rp-img">
+                        <h4>Creative Solutions</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus illo illum sit voluptates eum,
+                            atque facilis dolorem nemo tempora provident odio ab, cum eius. Nobis similique nulla totam temporibus
+                            recusandae?</p>
+                    </div>
+                </div>
+                <div class="header-card box4" onclick="rotateBox(this)">
+                    <div>
+                        <img src="img/puzzle.png" id="puzzle-img">
+                        <h4>Expert Team</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus illo illum sit voluptates eum,
+                            atque facilis dolorem nemo tempora provident odio ab, cum eius. Nobis similique nulla totam temporibus
+                            recusandae?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    
 </body>
 <script src="js/main.js"></script>
 </html>

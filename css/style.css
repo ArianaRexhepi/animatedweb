@@ -147,17 +147,101 @@ section img#moon {
     background-color: #2b1055;
     color: #fff;
 }
-.sec{
-    position: relative;
-    padding: 100px;
+
+/* about us section */
+
+/* Article background */
+.feature {
     background: #2b1055;
+    padding: 50px 0;
 }
-.sec h2{
-    font-size: 3.5em;
-    margin-bottom: 10px;
+
+/* Container styles */
+.container {
+    max-width: 1200px;
+    margin: 120px ;
+    padding: 20px;
+}
+
+/* Flex container styles */
+.flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Card styles */
+.header-card {
+    flex: 1;
+    max-width: 300px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.header-card img {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+}
+
+.header-card h4 {
+    font-size: 1.4em;
+    margin-bottom: 15px;
     color: #fff;
 }
-.sec p{
-    font-size: 1em;
-    color: #fff;
+
+.header-card p {
+    font-size: 0.9em;
+    color: #ccc;
+    line-height: 1.6;
 }
+
+/* Animation for visibility */
+.header-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hover effect */
+.header-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Animation for box1 */
+@keyframes slideInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.box1 {
+    animation: slideInFromLeft 1s ease-out;
+}
+
+.box2 {
+    animation: slideInFromLeft 1.2s ease-out;
+}
+
+.box3 {
+    animation: slideInFromLeft 1.4s ease-out;
+}
+
+.box4 {
+    animation: slideInFromLeft 1.6s ease-out;
+}
+

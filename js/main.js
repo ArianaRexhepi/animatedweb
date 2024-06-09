@@ -1,3 +1,5 @@
+
+
 let stars = document.getElementById('stars');
 let moon = document.getElementById('moon');
 let text = document.getElementById('text');
@@ -36,3 +38,40 @@ function updateMoonPosition() {
 }
 
 setInterval(updateMoonPosition, 10); 
+
+function rotateBox(box) {
+    box.style.transform = "rotate(360deg)";
+}
+
+// Function to check if element is in viewport
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+// Function to handle scroll animations
+function handleScrollAnimations() {
+    const boxes = document.querySelectorAll('.header-card');
+    boxes.forEach(box => {
+        if (isInViewport(box)) {
+            box.classList.add('visible');
+        }
+    });
+}
+
+// Function to rotate box on click
+function rotateBox(box) {
+    box.style.transform += " rotate(360deg)";
+}
+
+// Event listener for scroll
+window.addEventListener('scroll', handleScrollAnimations);
+
+// Initial call to handle animations on page load
+handleScrollAnimations();
+
