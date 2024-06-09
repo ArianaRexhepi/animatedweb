@@ -400,49 +400,50 @@ h2 {
   }
 }
 .cool-text {
-    text-align: center;
+    background: #1c0522;
+    text-align: left;
     padding: 50px;
-  }
-  
-  h2 {
+}
+
+#about-us-heading {
     font-size: 36px;
-    color: #333;
+    color: #fff;
     margin-bottom: 20px;
     position: relative;
     display: inline-block;
     padding-bottom: 10px;
-  }
-  
-  h2::after {
+}
+
+#about-us-heading::after {
     content: '';
     position: absolute;
     bottom: 0;
     left: 50%;
     width: 50%;
     height: 2px;
-    background-color: #FFC107;
+    background-color: #a089c9;
     transform: translateX(-50%);
     transition: width 0.3s ease;
-  }
-  
-  h2:hover::after {
+}
+
+#about-us-heading:hover::after {
     width: 80%;
-  }
-  
-  p {
+}
+
+#about-us-content {
     font-size: 18px;
-    color: #666;
+    color: #fff;
     line-height: 1.6;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
-  }
-  
-  .cool-text:hover p {
+}
+
+.cool-text:hover #about-us-content {
     opacity: 1;
     transform: translateY(0);
-  }
-  
+}
+
   
 
   
