@@ -75,4 +75,23 @@ window.addEventListener('scroll', handleScrollAnimations);
 
 handleScrollAnimations();
 
+// Get the audio element and audio controls
+var audio = document.getElementById("bgMusic");
+var audioIcon = document.getElementById("audio-icon");
+
+// Function to toggle audio play/pause
+function toggleAudio() {
+    if (audio.paused) {
+        audio.play();
+        audioIcon.className = "fas fa-pause";
+    } else {
+        audio.pause();
+        audioIcon.className = "fas fa-play";
+    }
+}
+
+// Function to set the volume
+function setVolume(volume) {
+    audio.volume = volume;
+}
 
