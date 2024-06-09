@@ -2,6 +2,7 @@
     window.addEventListener('scroll', function() {
         let moon = document.getElementById('moon');
         let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
         let soundPlayed = false;
 
         // Get the scroll position

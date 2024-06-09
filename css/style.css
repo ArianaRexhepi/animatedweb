@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Rubik", sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -68,13 +69,22 @@ section {
     align-items: center;
     /* overflow: hidden; */
 }
-
+section::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background:linear-gradient(to top, #1c0522, transparent );
+    z-index: 1000;
+}
 section img {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     object-fit: cover;
+    pointer-events: none;
 }
 
 section img#stars {
@@ -87,8 +97,8 @@ section img#stars {
 section img#moon {
     width: 200px; 
     height: auto; 
-    top: 50%;
-    left: 10%;
+    top: 30%;
+    /* left: 10%; */
     transform: translate(-50%, -50%);
     mix-blend-mode: screen;
     opacity: 0.5; 
@@ -100,4 +110,39 @@ section img#moon {
     white-space: nowrap;
     font-size: 7.5vw;
     z-index: 9;
+}
+.btn {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px 30px;
+    background-color: #fff;
+    color: #2b1055;
+    text-decoration: none;
+    border-radius: 40px;
+    font-size: 1.2em;
+    font-weight: 700;
+    z-index: 10;
+    transition: background-color 0.3s, color 0.3s;
+    opacity: 0.9;
+}
+
+.btn:hover {
+    background-color: #2b1055;
+    color: #fff;
+}
+.sec{
+    position: relative;
+    padding: 100px;
+    background: #2b1055;
+}
+.sec h2{
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+.sec p{
+    font-size: 1em;
+    color: #fff;
 }
