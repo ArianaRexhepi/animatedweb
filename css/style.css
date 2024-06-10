@@ -289,37 +289,6 @@ section img#moon {
     transform: translateZ(20px);
 }
 
-.audio-controls {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    display: flex;
-    align-items: center;
-    z-index: 9999;
-}
-
-.audio-controls button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 5px;
-    margin-right: 10px;
-}
-
-.audio-controls input {
-    width: 100px;
-    -webkit-appearance: none;
-    background-color: transparent;
-}
-
-.audio-controls input::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    width: 10px;
-    height: 10px;
-    background: #fff;
-    border-radius: 50%;
-}
-
 .about-us {
     position: relative;
   }
@@ -444,43 +413,87 @@ h2 {
     transform: translateY(0);
 }
 
+@keyframes bounceIn {
+    0%, 20%, 40%, 60%, 80%, 100% {
+        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+    0% {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+    20% {
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+    40% {
+        transform: scale3d(0.9, 0.9, 0.9);
+    }
+    60% {
+        opacity: 1;
+        transform: scale3d(1.03, 1.03, 1.03);
+    }
+    80% {
+        transform: scale3d(0.97, 0.97, 0.97);
+    }
+    100% {
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes zoomInTwist {
+    0% {
+        opacity: 0;
+        transform: scale(0.5) rotate(0deg);
+    }
+    50% {
+        transform: scale(1.1) rotate(15deg);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+}
+
 .content-wrapper {
     background: #1c0522;
     text-align: center;
     padding: 30px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    animation: fadeIn 1s ease-in-out;
     margin: 0;
-    padding: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     color: #fff;
 }
 
-
-#main-title {
-    margin: 0;
-    font-size: 3em;
-    letter-spacing: 2px;
+#main-title, .contact-article, .form-group, button {
+    opacity: 0; /* Initially hidden */
 }
 
-
-.contact-article {
-    margin-top: 20px;
+.animated.bounce-in {
+    animation: bounceIn 1s ease forwards;
 }
 
-#contact-title {
-    margin-bottom: 20px;
-    font-size: 2.5em;
-    letter-spacing: 1.5px;
+.animated.zoom-in-twist {
+    animation: zoomInTwist 1s ease forwards;
 }
 
+button {
+    background: #573660;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
 
-.form-group {
-    margin-bottom: 20px;
-    text-align: left;
+button:hover {
+    background: #a089c9;
+    transform: translateY(-2px);
 }
 
 label {
@@ -505,82 +518,9 @@ input:focus, textarea:focus {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
-button {
-    background:#573660;
-    border: none;
-    padding: 15px 30px;
-    border-radius: 5px;
-    color: #fff;
-    font-size: 1.2em;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.3s ease;
-}
 
-button:hover {
-    background: #a089c9;
-    transform: translateY(-2px);
-}
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
 
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateX(-30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.contact-article .form-group:nth-child(1) {
-    animation-delay: 0.2s;
-}
-
-.contact-article .form-group:nth-child(2) {
-    animation-delay: 0.4s;
-}
-
-.contact-article .form-group:nth-child(3) {
-    animation-delay: 0.6s;
-}
-
-.contact-article button {
-    animation: fadeInUp 1s ease-in-out forwards;
-    animation-delay: 0.8s;
-}
 
   
 

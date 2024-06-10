@@ -137,5 +137,32 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     this.reset();
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const options = {
+        threshold: 0.1
+    };
+
+    const elements = document.querySelectorAll('#main-title, .contact-article, .form-group, button');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                if (entry.target.matches('#main-title')) {
+                    entry.target.classList.add('animated', 'bounce-in');
+                } else if (entry.target.matches('.form-group')) {
+                    entry.target.classList.add('animated', 'zoom-in-twist');
+                } else if (entry.target.matches('button')) {
+                    entry.target.classList.add('animated', 'zoom-in-twist');
+                }
+                observer.unobserve(entry.target);
+            }
+        });
+    }, options);
+
+    elements.forEach(element => {
+        observer.observe(element);
+    });
+});
+
 
   
