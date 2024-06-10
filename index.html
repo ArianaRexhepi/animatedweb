@@ -9,6 +9,13 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
+
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
   </head>
   <body>
     <header>
@@ -140,29 +147,108 @@
         </div>
       </article>
       
-      <section class="slider" id="slider">
-        <div class="row">
-           <div class="col50">
-            <h2 class="titleText">About us</h2><br>
-            <p>Conscious of our lack of connectivity, we wish to humbly take on the great challenge of discovering and, in some cases, rediscovering this beautiful country, replete with unique ingredients, landscapes, cultures, traditions, and history. <br><br> 
-                Above all we wish to connect with the individuals who live here and convey their stories.
-                Our collaborative team works hard to create links between humans, nature and culture, and strives to highlight those elusive elements that few people see in their daily lives.<br><br>
-                The expedition we undertake has no destination or end, rather, it centers on constant movement, observation and respect for the temporality and the seasonality dictated by Earth.</p> 
+      <section class="container-1">
+        <div class="card__container swiper">
+           <div class="card__content">
+              <div class="swiper-wrapper">
+                 <article class="card__article swiper-slide">
+                    <div class="card__image">
+                       <img src="assets/img/avatar-1.png" alt="image" class="card__img">
+                       <div class="card__shadow"></div>
+                    </div>
+     
+                    <div class="card__data">
+                       <h3 class="card__name">Kell Dawx</h3>
+                       <p class="card__description">
+                          Passionate about development and design, 
+                          I carry out projects at the request of users.
+                       </p>
+                    </div>
+                 </article>
+     
+                 <article class="card__article swiper-slide">
+                    <div class="card__image">
+                       <img src="assets/img/avatar-2.png" alt="image" class="card__img">
+                       <div class="card__shadow"></div>
+                    </div>
+     
+                    <div class="card__data">
+                       <h3 class="card__name">Lotw Fox</h3>
+                       <p class="card__description">
+                          Passionate about development and design, 
+                          I carry out projects at the request of users.
+                       </p>
+     
+                       <a href="#" class="card__button">View More</a>
+                    </div>
+                 </article>
+     
+                 <article class="card__article swiper-slide">
+                    <div class="card__image">
+                       <img src="assets/img/avatar-3.png" alt="image" class="card__img">
+                       <div class="card__shadow"></div>
+                    </div>
+     
+                    <div class="card__data">
+                       <h3 class="card__name">Sara Mit</h3>
+                       <p class="card__description">
+                          Passionate about development and design, 
+                          I carry out projects at the request of users.
+                       </p>
+     
+                       <a href="#" class="card__button">View More</a>
+                    </div>
+                 </article>
+     
+                 <article class="card__article swiper-slide">
+                    <div class="card__image">
+                       <img src="assets/img/avatar-4.png" alt="image" class="card__img">
+                       <div class="card__shadow"></div>
+                    </div>
+     
+                    <div class="card__data">
+                       <h3 class="card__name">Jenny Wert</h3>
+                       <p class="card__description">
+                          Passionate about development and design, 
+                          I carry out projects at the request of users.
+                       </p>
+     
+                       <a href="#" class="card__button">View More</a>
+                    </div>
+                 </article>
+
+                 <article class="card__article swiper-slide">
+                    <div class="card__image">
+                       <img src="assets/img/avatar-5.png" alt="image" class="card__img">
+                       <div class="card__shadow"></div>
+                    </div>
+     
+                    <div class="card__data">
+                       <h3 class="card__name">Lexa Kin</h3>
+                       <p class="card__description">
+                          Passionate about development and design, 
+                          I carry out projects at the request of users.
+                       </p>
+     
+                       <a href="#" class="card__button">View More</a>
+                    </div>
+                 </article>
+              </div>
            </div>
-           <div class="wrapper">
-            <i id="left" class="fa-solid fa-angle-left"></i>
-            <div class="carousel">
-              <img src="img/42218.jpg" alt="img" draggable="false">
-              <img src="img/brain.png" alt="img" draggable="false">
-              <img src="img/meteor-comet-set.png" alt="img" draggable="false">
-              <img src="img/42218.jpg" alt="img" draggable="false">
-            </div>
-            <i id="right" class="fa-solid fa-angle-right"></i>
-            <i id="left" class="fa-solid fa-angle-left"></i>
-          </div>
+
+           <!-- Navigation buttons -->
+           <div class="swiper-button-next">
+              <i class="ri-arrow-right-s-line"></i>
+           </div>
+           
+           <div class="swiper-button-prev">
+              <i class="ri-arrow-left-s-line"></i>
+           </div>
+
+           <!-- Pagination -->
+           <div class="swiper-pagination"></div>
         </div>
-        </section>
-      
+     </section>
 
     <section class="about-us" id="about">
         <div class="container">
@@ -202,4 +288,5 @@
   </footer>
   <script src="js/main.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.0.4/pixi.min.js"></script>
+  <script src="assets/js/swiper-bundle.min.js"></script>
 </html>
