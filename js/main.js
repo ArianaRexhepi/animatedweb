@@ -164,5 +164,69 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+const sliderContainer = document.getElementById('slider-container');
+const sliderInfo = document.getElementById('slider-info');
+
+const app = new PIXI.Application({
+    width: sliderContainer.clientWidth,
+    height: sliderContainer.clientHeight,
+    backgroundColor: 0x1c0522,
+    resizeTo: sliderContainer
+});
+sliderContainer.appendChild(app.view);
+
+const staff = [
+    { name: 'John Doe', position: 'CEO', src: 'img/brain.png' },
+    { name: 'Jane Smith', position: 'CTO', src: 'img/brain.png'  },
+    { name: 'Mike Johnson', position: 'CFO', src: 'img/brain.png'  }
+];
+
+let currentIndex = 0;
+const staffSprites = [];
+
+staff.forEach((member, index) => {
+    console.log(`Loading image: ${member.src}`);
+    const texture = PIXI.Texture.from(member.image);
+    const sprite = new PIXI.Sprite(texture);
+    
+    sprite.x = app.screen.width / 2 - texture.width / 2;
+    sprite.y = app.screen.height / 2 - texture.height / 2;
+    sprite.alpha = index === currentIndex ? 1 : 0.5;
+    
+    sprite.interactive = true;
+    sprite.buttonMode = true;
+    
+    sprite.on('pointerover', () => {
+        sliderInfo.style.display = 'block';
+        sliderInfo.textContent = `${member.name} - ${member.position}`;
+    });
+    
+    sprite.on('pointerout', () => {
+        sliderInfo.style.display = 'none';
+    });
+    
+    app.stage.addChild(sprite);
+    staffSprites.push(sprite);
+});
+
+function slideTo(index) {
+    staffSprites[currentIndex].alpha = 0.5;
+    staffSprites[index].alpha = 1;
+    currentIndex = index;
+}
+
+setInterval(() => {
+    const nextIndex = (currentIndex + 1) % staff.length;
+    slideTo(nextIndex);
+}, 3000);
+
+window.addEventListener('resize', () => {
+    app.renderer.resize(sliderContainer.clientWidth, sliderContainer.clientHeight);
+    staffSprites.forEach(sprite => {
+        sprite.x = app.screen.width / 2 - sprite.width / 2;
+        sprite.y = app.screen.height / 2 - sprite.height / 2;
+    });
+});
+
 
   

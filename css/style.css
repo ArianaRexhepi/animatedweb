@@ -469,7 +469,7 @@ h2 {
 }
 
 #main-title, .contact-article, .form-group, button {
-    opacity: 0; /* Initially hidden */
+    opacity: 0; 
 }
 
 .animated.bounce-in {
@@ -517,7 +517,26 @@ input:focus, textarea:focus {
     outline: none;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
-
+#slider-container {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 80%;
+    height: 500px;
+    margin: auto;
+    position: relative;
+}
+#slider-info {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+}
 
 
 
