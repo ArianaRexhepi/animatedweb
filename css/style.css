@@ -378,7 +378,7 @@ h2 {
 .item {
   margin: 10px;
   overflow: hidden;
-  width: 400px; /* Adjust item width as needed */
+  width: 400px; 
 }
 
 .item img {
@@ -445,12 +445,11 @@ h2 {
 }
 
 .content-wrapper {
+    background: #1c0522;
     text-align: center;
     padding: 30px;
-    border-radius: 15px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     animation: fadeIn 1s ease-in-out;
-    background: linear-gradient(to right, #2b1055);
     margin: 0;
     padding: 0;
     display: flex;
@@ -460,14 +459,14 @@ h2 {
     color: #fff;
 }
 
-/* Header Styling */
+
 #main-title {
     margin: 0;
     font-size: 3em;
     letter-spacing: 2px;
 }
 
-/* Article Styling */
+
 .contact-article {
     margin-top: 20px;
 }
@@ -478,7 +477,7 @@ h2 {
     letter-spacing: 1.5px;
 }
 
-/* Form Styling */
+
 .form-group {
     margin-bottom: 20px;
     text-align: left;
@@ -491,7 +490,7 @@ label {
 }
 
 input, textarea {
-    width: 100%;
+    width: 350px;
     padding: 15px;
     border: none;
     border-radius: 5px;
@@ -507,7 +506,7 @@ input:focus, textarea:focus {
 }
 
 button {
-    background: #0072ff;
+    background:#573660;
     border: none;
     padding: 15px 30px;
     border-radius: 5px;
@@ -518,7 +517,7 @@ button {
 }
 
 button:hover {
-    background: #005bb5;
+    background: #a089c9;
     transform: translateY(-2px);
 }
 
@@ -566,7 +565,6 @@ button:hover {
     }
 }
 
-/* Adding delay for staggered animation */
 .contact-article .form-group:nth-child(1) {
     animation-delay: 0.2s;
 }
