@@ -15,8 +15,8 @@
       <a href="#" class="logo">Logo</a>
       <ul>
         <li><a href="#" class="active">Home</a></li>
-        <li><a href="#feature">About</a></li>
-        <li><a href="#">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#work">Work</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
     </header>
@@ -30,7 +30,7 @@
         id="moon"
       />
       <h2 id="text">Borealis</h2>
-      <a href="#feature" class="btn">Discover More</a>
+      <a href="#work" class="btn">Discover More</a>
 
       <audio id="bgMusic" autoplay loop>
         <source src="img/Sounds from Around the Milky Way.mp3" type="audio/mpeg">
@@ -38,7 +38,7 @@
     </audio>
     </section>
     
-    <div class="cool-text">
+    <div class="cool-text" id="about">
         <h2 id="about-us-heading">About us</h2>
         <p id="about-us-content">Welcome to Borealis, where innovation meets excellence in software design.
             With over 12 years of industry experience, we've been at the forefront of crafting cutting-edge solutions that redefine user experiences and drive business success. <br>
@@ -118,7 +118,7 @@
       </div>
     </article>
 
-    <article class="portfolio">
+    <article class="portfolio" id="work">
         <h2>Our Work</h2>
         <div class="portfolio-buttons">
           <button class="btnn active" data-filter="all">All</button>
@@ -153,7 +153,26 @@
           </div>
         </div>
       </section>
-
+      <div class="content-wrapper">
+      <article class="contact-form">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit">Send</button>
+        </form>
+    </article>
+</div>
 
   </body>
   <footer style="background: white">
